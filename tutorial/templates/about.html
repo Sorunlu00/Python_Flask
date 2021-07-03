@@ -1,0 +1,23 @@
+{% extends 'layout.html' %}
+{% block content%}
+    <title class="article-title">{{ title }}</title>
+    <h1>About Me</h1>
+    <p>My name is <em>Fikri</em> and I am 26 years old, I live in United Kingdom. I have been learning how to code nearly a year now and trying to develop new skills,
+    This is my first website design using Python Flask microframework. I've been also learning other packages too List of packages I've been learning about. </p>
+    <ul>
+        <li>Language: Python</li>
+        <li>Data Science</li>
+        <li>Machine Learning</li>
+        <li>Flask MicroFramework</li>
+
+    </ul>
+    <p style="font-family:courier;">If you like to make any donations please follow along.</p>
+    <form action="https://www.paypal.com/donate" method="post" target="_top">
+    <input type="hidden" name="hosted_button_id" value="GXWCPYXEE7S92" />
+    <input type="image" src="https://www.paypalobjects.com/en_GB/i/btn/btn_donate_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
+    <img alt="" border="0" src="https://www.paypal.com/en_GB/i/scr/pixel.gif" width="1" height="10" />
+    <a href="https://www.paypal.com/donate?hosted_button_id=GXWCPYXEE7S92">Share with your friends!</a>
+    </form>
+
+{% endblock content %}
+

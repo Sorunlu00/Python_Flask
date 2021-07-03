@@ -1,0 +1,35 @@
+{% extends 'layout.html' %}
+{% block content%}
+    <legend>Cryptocurrency</legend>
+
+    <small class="text-muted">A cryptocurrency is a digital or virtual currency that is secured by cryptography, which makes it nearly impossible to counterfeit or double-spend. Many cryptocurrencies are decentralized networks based on blockchain technology—a distributed ledger enforced by a disparate network of computers. A defining feature of cryptocurrencies is that they are generally not issued by any central authority, rendering them theoretically immune to government interference or manipulation...</small>
+<hr>
+<a href="{{ url_for('main.crypto') }} " ><button type="button" class="btn btn-light">
+<span class="glyphicon glyphicon-refresh"></span> Refresh</a>
+</button><small class="text-muted" > Prices update every 30 seconds..</small>
+
+
+<div class="container">
+        <div class="row">
+    {% for key,value in btc.items() %}
+        {% for name,price in value.items() %}
+        <ul>
+            <i><li>{{ key }}-{{ name }} <b>{{ price }}</b></li></i>
+        </ul>
+            {% endfor %}
+    {% endfor %}
+    </div>
+</div>
+<hr>
+
+
+
+    <h5> Usefull links for cryptocurrencies </h5>
+    <a href='https://coinmarketcap.com/'> <p> CoinMarketCap </p></a>
+    <p> CoinMarketCap is the world's most-referenced price-tracking website for cryptoassets in the rapidly growing cryptocurrency space. Its mission is to make crypto discoverable and efficient globally by empowering retail users with unbiased, high quality and accurate information for drawing their own informed conclusions.</p>
+    <hr>
+    <a href='https://www.binance.com/en'> <p> Binance </p></a>
+    <p> Binance is very well cryptocurrencies exchange website.</p>
+
+
+{% endblock content %}
